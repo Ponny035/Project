@@ -1,24 +1,31 @@
-[[LoginDBAdapter.java]]
-public String getMatchUser(String User)
-    {
-        Cursor cursor1=db.query("LOGIN", null,  COL_USERNAME + "=?", new String[]{User}, null, null, null);
-        if(cursor1.getCount()>1)
-        {
-            cursor1.close();
-            return "User Match";
-        }
-        return User;
-    }
-
-[[RegisterActivity.java]]
-final EditText getUser =(EditText)findViewById(R.id.editText_Username);
-                String User =getUser.getText().toString();
-                LoginDBAdapter loginDataBaseAdapter;
-                loginDataBaseAdapter=new LoginDBAdapter(RegisterActivity.this);
-                loginDataBaseAdapter=loginDataBaseAdapter.open();
-                String storedUser=loginDataBaseAdapter.getMatchUser(User);
-                if(userName.equals(storedUser))
-                {
-                    Toast.makeText(getApplicationContext(), "User already exist", Toast.LENGTH_LONG).show();
-                    return;
-                }
+05-01 19:00:49.940  28691-28691/com.example.pete.project E/AndroidRuntime﹕ FATAL EXCEPTION: main
+    Process: com.example.pete.project, PID: 28691
+    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.example.pete.project/com.example.pete.project.PersonalActivity}: java.lang.NullPointerException
+            at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2412)
+            at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2470)
+            at android.app.ActivityThread.access$900(ActivityThread.java:174)
+            at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1307)
+            at android.os.Handler.dispatchMessage(Handler.java:102)
+            at android.os.Looper.loop(Looper.java:146)
+            at android.app.ActivityThread.main(ActivityThread.java:5593)
+            at java.lang.reflect.Method.invokeNative(Native Method)
+            at java.lang.reflect.Method.invoke(Method.java:515)
+            at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1283)
+            at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1099)
+            at dalvik.system.NativeStart.main(Native Method)
+     Caused by: java.lang.NullPointerException
+            at com.example.pete.project.PersonalActivity.onCreate(PersonalActivity.java:29)
+            at android.app.Activity.performCreate(Activity.java:5458)
+            at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1093)
+            at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2376)
+            at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2470)
+            at android.app.ActivityThread.access$900(ActivityThread.java:174)
+            at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1307)
+            at android.os.Handler.dispatchMessage(Handler.java:102)
+            at android.os.Looper.loop(Looper.java:146)
+            at android.app.ActivityThread.main(ActivityThread.java:5593)
+            at java.lang.reflect.Method.invokeNative(Native Method)
+            at java.lang.reflect.Method.invoke(Method.java:515)
+            at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1283)
+            at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1099)
+            at dalvik.system.NativeStart.main(Native Method)
