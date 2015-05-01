@@ -1,6 +1,6 @@
-05-01 16:06:42.142  26985-26985/com.example.pete.project E/AndroidRuntime﹕ FATAL EXCEPTION: main
-    Process: com.example.pete.project, PID: 26985
-    android.database.sqlite.SQLiteException: no such column: USERNAME (code 1): , while compiling: SELECT * FROM LOGIN WHERE  USERNAME=?
+05-01 16:33:37.986    2709-2709/com.example.pete.project E/AndroidRuntime﹕ FATAL EXCEPTION: main
+    Process: com.example.pete.project, PID: 2709
+    android.database.sqlite.SQLiteException: no such column: COL_USERNAME (code 1): , while compiling: SELECT * FROM LOGIN WHERE  COL_USERNAME =?
             at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
             at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:1113)
             at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:690)
