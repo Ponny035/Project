@@ -1,6 +1,6 @@
-05-01 19:00:49.940  28691-28691/com.example.pete.project E/AndroidRuntime﹕ FATAL EXCEPTION: main
-    Process: com.example.pete.project, PID: 28691
-    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.example.pete.project/com.example.pete.project.PersonalActivity}: java.lang.NullPointerException
+05-06 17:51:56.719  17978-17978/com.example.pete.project E/AndroidRuntime﹕ FATAL EXCEPTION: main
+    Process: com.example.pete.project, PID: 17978
+    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.example.pete.project/com.example.pete.project.EditInfoActivity}: java.lang.IllegalArgumentException: the bind value at index 1 is null
             at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2412)
             at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2470)
             at android.app.ActivityThread.access$900(ActivityThread.java:174)
@@ -13,8 +13,15 @@
             at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1283)
             at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1099)
             at dalvik.system.NativeStart.main(Native Method)
-     Caused by: java.lang.NullPointerException
-            at com.example.pete.project.PersonalActivity.onCreate(PersonalActivity.java:29)
+     Caused by: java.lang.IllegalArgumentException: the bind value at index 1 is null
+            at android.database.sqlite.SQLiteProgram.bindString(SQLiteProgram.java:164)
+            at android.database.sqlite.SQLiteProgram.bindAllArgsAsStrings(SQLiteProgram.java:200)
+            at android.database.sqlite.SQLiteDirectCursorDriver.query(SQLiteDirectCursorDriver.java:47)
+            at android.database.sqlite.SQLiteDatabase.rawQueryWithFactory(SQLiteDatabase.java:1448)
+            at android.database.sqlite.SQLiteDatabase.queryWithFactory(SQLiteDatabase.java:1295)
+            at android.database.sqlite.SQLiteDatabase.query(SQLiteDatabase.java:1166)
+            at android.database.sqlite.SQLiteDatabase.query(SQLiteDatabase.java:1334)
+            at com.example.pete.project.EditInfoActivity.onCreate(EditInfoActivity.java:38)
             at android.app.Activity.performCreate(Activity.java:5458)
             at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1093)
             at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2376)
